@@ -5,7 +5,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const tax = subtotal * 0.085;
+  const tax = subtotal * 0.12; // 12% QQS
   const total = subtotal + tax;
 
   return (
@@ -26,10 +26,10 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               </div>
               <div>
                 <h3 className="font-serif text-xl font-bold text-espresso">
-                  Your Order
+                  Sizning buyurtmangiz
                 </h3>
                 <span className="text-xs text-espresso/60">
-                  {cartItems.reduce((acc, i) => acc + i.quantity, 0)} items selected
+                  {cartItems.reduce((acc, i) => acc + i.quantity, 0)} ta mahsulot tanlandi
                 </span>
               </div>
             </div>
@@ -37,7 +37,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
             <button
               onClick={onClose}
               className="p-2 rounded-full text-espresso/60 hover:text-espresso hover:bg-sand/60 transition-colors"
-              aria-label="Close cart"
+              aria-label="Savatchani yopish"
             >
               <X className="w-5 h-5" />
             </button>
@@ -51,16 +51,16 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                   <ShoppingBag className="w-8 h-8" />
                 </div>
                 <h4 className="font-serif text-lg font-bold text-espresso mb-1">
-                  Your order is empty
+                  Savatchangiz boʻsh
                 </h4>
                 <p className="text-xs sm:text-sm text-espresso/60 max-w-xs mx-auto mb-6">
-                  Click the "+" button on any seasonal or menu item to add fresh brews and bakery treats.
+                  Menyudagi xushboʻy ichimliklar yoki pishiriqlar yonidagi "+" tugmasini bosing.
                 </p>
                 <button
                   onClick={onClose}
                   className="px-6 py-2.5 bg-espresso text-cream text-xs font-semibold rounded-full hover:bg-coffee transition-colors"
                 >
-                  Browse Menu
+                  Menyuni koʻrish
                 </button>
               </div>
             ) : (
@@ -79,13 +79,13 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                       {item.name}
                     </h5>
                     <span className="text-xs text-caramel font-semibold block">
-                      ${item.price.toFixed(2)}
+                      {item.price.toLocaleString('uz-UZ')} soʻm
                     </span>
                     <div className="flex items-center gap-2 mt-2">
                       <button
                         onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
                         className="w-6 h-6 rounded-full bg-cream border border-sand flex items-center justify-center text-espresso hover:bg-sand transition-colors"
-                        aria-label="Decrease quantity"
+                        aria-label="Miqdorni kamaytirish"
                       >
                         <Minus className="w-3 h-3" />
                       </button>
@@ -95,7 +95,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                       <button
                         onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
                         className="w-6 h-6 rounded-full bg-cream border border-sand flex items-center justify-center text-espresso hover:bg-sand transition-colors"
-                        aria-label="Increase quantity"
+                        aria-label="Miqdorni oshirish"
                       >
                         <Plus className="w-3 h-3" />
                       </button>
@@ -106,12 +106,12 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                     <button
                       onClick={() => onRemoveItem(item.id)}
                       className="text-espresso/40 hover:text-red-600 transition-colors p-1"
-                      aria-label="Remove item"
+                      aria-label="Oʻchirish"
                     >
                       <Trash2 className="w-4 h-4" />
                     </button>
                     <span className="font-serif text-sm font-bold text-espresso">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      {(item.price * item.quantity).toLocaleString('uz-UZ')} soʻm
                     </span>
                   </div>
                 </div>
@@ -124,28 +124,28 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
             <div className="p-6 bg-sand/40 border-t border-sand space-y-3">
               <div className="space-y-1.5 text-xs text-espresso/70">
                 <div className="flex justify-between">
-                  <span>Subtotal</span>
-                  <span className="font-semibold text-espresso">${subtotal.toFixed(2)}</span>
+                  <span>Oraliq summa</span>
+                  <span className="font-semibold text-espresso">{subtotal.toLocaleString('uz-UZ')} soʻm</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Estimated Tax</span>
-                  <span className="font-semibold text-espresso">${tax.toFixed(2)}</span>
+                  <span>QQS (12%)</span>
+                  <span className="font-semibold text-espresso">{tax.toLocaleString('uz-UZ')} soʻm</span>
                 </div>
                 <div className="flex justify-between text-sm font-bold text-espresso pt-2 border-t border-sand/70">
-                  <span>Total Due</span>
-                  <span className="font-serif text-lg text-espresso">${total.toFixed(2)}</span>
+                  <span>Jami toʻlov</span>
+                  <span className="font-serif text-lg text-espresso">{total.toLocaleString('uz-UZ')} soʻm</span>
                 </div>
               </div>
 
               <button
                 onClick={() => {
-                  alert(`Thank you! Order of $${total.toFixed(2)} placed for pickup at Qahva House Flagship.`);
+                  alert(`Tashakkur! ${total.toLocaleString('uz-UZ')} soʻmlik buyurtmangiz Qahva House filialidan olib ketish uchun qabul qilindi.`);
                   onClearCart();
                   onClose();
                 }}
                 className="w-full py-3.5 bg-espresso hover:bg-coffee text-cream text-sm font-semibold rounded-full flex items-center justify-center gap-2 shadow-warm-md transition-colors"
               >
-                <span>Proceed to Order Pickup</span>
+                <span>Buyurtmani rasmiylashtirish</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

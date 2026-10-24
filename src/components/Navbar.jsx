@@ -32,11 +32,11 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'Menu', href: '#menu', id: 'menu' },
-    { name: 'Our Story', href: '#our-story', id: 'our-story' },
-    { name: 'Locations', href: '#locations', id: 'locations' },
-    { name: 'Gallery', href: '#gallery', id: 'gallery' },
+    { name: 'Bosh sahifa', href: '#home', id: 'home' },
+    { name: 'Menyu', href: '#menu', id: 'menu' },
+    { name: 'Hikoyamiz', href: '#our-story', id: 'our-story' },
+    { name: 'Manzillar', href: '#locations', id: 'locations' },
+    { name: 'Galereya', href: '#gallery', id: 'gallery' },
   ];
 
   const handleLinkClick = (e, href) => {
@@ -64,7 +64,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
             href="#home"
             onClick={(e) => handleLinkClick(e, '#home')}
             className="group flex items-center gap-2.5 text-espresso focus:outline-none"
-            aria-label={`${CAFE_NAME} Home`}
+            aria-label={`${CAFE_NAME} Bosh sahifasi`}
           >
             <div className="w-10 h-10 rounded-full bg-espresso text-cream flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm">
               <Coffee className="w-5 h-5 text-sand" />
@@ -74,7 +74,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
                 {CAFE_NAME}
               </span>
               <span className="text-[10px] uppercase tracking-widest text-caramel font-semibold -mt-1 hidden sm:block">
-                Artisan Roastery
+                Maxsus Qahva Maskani
               </span>
             </div>
           </a>
@@ -111,7 +111,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
               onClick={onOpenCart}
               type="button"
               className="relative p-2.5 rounded-full text-espresso hover:bg-sand/60 transition-colors focus:outline-none focus:ring-2 focus:ring-caramel"
-              aria-label={`Cart with ${cartCount} items`}
+              aria-label={`Buyurtmada ${cartCount} ta mahsulot`}
             >
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
@@ -128,7 +128,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
               className="hidden sm:inline-flex items-center gap-2 bg-espresso text-cream hover:bg-coffee px-5 py-2.5 rounded-full text-sm font-medium tracking-wide shadow-sm hover:shadow-warm-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-espresso"
             >
               <Calendar className="w-4 h-4 text-caramel" />
-              <span>Reserve a Table</span>
+              <span>Stol band qilish</span>
             </button>
 
             {/* Mobile Hamburger Toggle */}
@@ -137,7 +137,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
               type="button"
               className="md:hidden p-2.5 rounded-lg text-espresso hover:bg-sand/60 transition-colors focus:outline-none focus:ring-2 focus:ring-caramel"
               aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation menu"
+              aria-label="Navigatsiya menyusini ochish"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -175,7 +175,7 @@ export default function Navbar({ cartCount, onOpenReserve, onOpenCart }) {
                 className="w-full flex items-center justify-center gap-2 bg-espresso text-cream hover:bg-coffee py-3 rounded-full text-sm font-medium shadow-sm transition-colors"
               >
                 <Calendar className="w-4 h-4 text-caramel" />
-                <span>Reserve a Table</span>
+                <span>Stol band qilish</span>
               </button>
             </div>
           </div>

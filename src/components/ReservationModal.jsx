@@ -7,10 +7,10 @@ export default function ReservationModal({ isOpen, onClose }) {
     name: '',
     phone: '',
     date: new Date().toISOString().split('T')[0],
-    time: '10:00 AM',
+    time: '10:00',
     guests: '2',
     location: BRAND_INFO.locations[0].name,
-    seatingPreference: 'Cozy Nook / Window'
+    seatingPreference: 'Shinam burchak / Deraza oldi'
   });
 
   const [errors, setErrors] = useState({});
@@ -22,17 +22,17 @@ export default function ReservationModal({ isOpen, onClose }) {
   const validate = () => {
     const errs = {};
     if (!formData.name.trim() || formData.name.trim().length < 2) {
-      errs.name = 'Please enter your full name.';
+      errs.name = 'Iltimos, toʻliq ismingizni kiriting.';
     }
     const phoneClean = formData.phone.replace(/[^0-9]/g, '');
     if (!phoneClean || phoneClean.length < 7) {
-      errs.phone = 'Please enter a valid phone number.';
+      errs.phone = 'Iltimos, toʻgʻri telefon raqamingizni kiriting.';
     }
     if (!formData.date) {
-      errs.date = 'Please select a reservation date.';
+      errs.date = 'Iltimos, tashrif sanasini tanlang.';
     }
     if (!formData.time) {
-      errs.time = 'Please pick a preferred time.';
+      errs.time = 'Iltimos, qulay vaqtni tanlang.';
     }
     return errs;
   };
@@ -70,7 +70,7 @@ export default function ReservationModal({ isOpen, onClose }) {
         <button
           onClick={handleReset}
           className="absolute top-5 right-5 p-2 rounded-full text-espresso/60 hover:text-espresso hover:bg-sand/60 transition-colors"
-          aria-label="Close reservation dialog"
+          aria-label="Oynani yopish"
         >
           <X className="w-5 h-5" />
         </button>
@@ -79,14 +79,14 @@ export default function ReservationModal({ isOpen, onClose }) {
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-1">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>TABLE RESERVATION</span>
+              <span>STOL BAND QILISH</span>
             </div>
             
             <h3 id="reservation-title" className="font-serif text-2xl sm:text-3xl font-bold text-espresso mb-2">
-              Book Your Experience
+              Stol band qilish
             </h3>
             <p className="text-xs sm:text-sm text-espresso/70 mb-6 font-light">
-              Join us at {CAFE_NAME} for fresh handcrafted coffee and comfortable hospitality. Reservations are held for 15 minutes.
+              {CAFE_NAME} maskaniga tashrif buyuring. Yangi damlangan qahva va iliq mehmondoʻstlikdan bahramand boʻling. Band qilingan stollar 15 daqiqa davomida saqlanadi.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -94,7 +94,7 @@ export default function ReservationModal({ isOpen, onClose }) {
               {/* Location Selector */}
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                  Select Location
+                  Filialni tanlang
                 </label>
                 <div className="relative">
                   <select
@@ -116,12 +116,12 @@ export default function ReservationModal({ isOpen, onClose }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Your Name *
+                    Ism *
                   </label>
                   <div className="relative">
                     <input
                       type="text"
-                      placeholder="Eleanor Vance"
+                      placeholder="Doniyorbek Hazratqulov"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className={`w-full bg-sand/30 border rounded-xl pl-9 pr-3 py-2.5 text-sm text-espresso placeholder-espresso/40 focus:outline-none focus:ring-1 transition-colors ${
@@ -135,12 +135,12 @@ export default function ReservationModal({ isOpen, onClose }) {
 
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Phone Number *
+                    Telefon raqam *
                   </label>
                   <div className="relative">
                     <input
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+998 (90) 123-45-67"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className={`w-full bg-sand/30 border rounded-xl pl-9 pr-3 py-2.5 text-sm text-espresso placeholder-espresso/40 focus:outline-none focus:ring-1 transition-colors ${
@@ -157,7 +157,7 @@ export default function ReservationModal({ isOpen, onClose }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Date *
+                    Sana *
                   </label>
                   <div className="relative">
                     <input
@@ -173,7 +173,7 @@ export default function ReservationModal({ isOpen, onClose }) {
 
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Time Slot *
+                    Vaqt *
                   </label>
                   <div className="relative">
                     <select
@@ -182,8 +182,8 @@ export default function ReservationModal({ isOpen, onClose }) {
                       className="w-full bg-sand/30 border border-sand rounded-xl pl-9 pr-8 py-2.5 text-sm text-espresso focus:outline-none focus:border-caramel focus:ring-1 focus:ring-caramel transition-colors appearance-none"
                     >
                       {[
-                        '08:00 AM', '09:00 AM', '10:00 AM', '11:30 AM',
-                        '01:00 PM', '02:30 PM', '04:00 PM', '05:30 PM', '07:00 PM'
+                        '08:00', '09:00', '10:00', '11:30',
+                        '13:00', '14:30', '16:00', '17:30', '19:00', '20:00'
                       ].map((slot) => (
                         <option key={slot} value={slot}>{slot}</option>
                       ))}
@@ -197,7 +197,7 @@ export default function ReservationModal({ isOpen, onClose }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Number of Guests
+                    Mehmonlar soni
                   </label>
                   <div className="relative">
                     <select
@@ -205,9 +205,9 @@ export default function ReservationModal({ isOpen, onClose }) {
                       onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
                       className="w-full bg-sand/30 border border-sand rounded-xl pl-9 pr-8 py-2.5 text-sm text-espresso focus:outline-none focus:border-caramel focus:ring-1 focus:ring-caramel transition-colors appearance-none"
                     >
-                      {[1, 2, 3, 4, 5, 6, '7+ (Private Room)'].map((num) => (
+                      {[1, 2, 3, 4, 5, 6, '7+ (Alohida xona)'].map((num) => (
                         <option key={num} value={num}>
-                          {num} {typeof num === 'number' && num === 1 ? 'Guest' : 'Guests'}
+                          {num} {typeof num === 'number' ? 'kishi' : ''}
                         </option>
                       ))}
                     </select>
@@ -217,17 +217,17 @@ export default function ReservationModal({ isOpen, onClose }) {
 
                 <div>
                   <label className="block text-xs font-semibold uppercase tracking-wider text-espresso/70 mb-1.5">
-                    Seating Preference
+                    Joylashuv afzalligi
                   </label>
                   <select
                     value={formData.seatingPreference}
                     onChange={(e) => setFormData({ ...formData, seatingPreference: e.target.value })}
                     className="w-full bg-sand/30 border border-sand rounded-xl px-4 py-2.5 text-sm text-espresso focus:outline-none focus:border-caramel focus:ring-1 focus:ring-caramel transition-colors"
                   >
-                    <option value="Cozy Nook / Window">Cozy Nook / Window</option>
-                    <option value="Espresso Bar High-Top">Espresso Bar High-Top</option>
-                    <option value="Outdoor Sunlit Patio">Outdoor Sunlit Patio</option>
-                    <option value="Quiet Reading Table">Quiet Reading Table</option>
+                    <option value="Shinam burchak / Deraza oldi">Shinam burchak / Deraza oldi</option>
+                    <option value="Espresso bar peshtaxtasi">Espresso bar peshtaxtasi</option>
+                    <option value="Ochiq yozgi ayvon">Ochiq yozgi ayvon</option>
+                    <option value="Sokin mutolaa stoli">Sokin mutolaa stoli</option>
                   </select>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default function ReservationModal({ isOpen, onClose }) {
                   type="submit"
                   className="w-full py-3.5 bg-espresso hover:bg-coffee text-cream font-semibold rounded-full text-sm shadow-warm-md hover:shadow-warm-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
                 >
-                  Confirm Reservation
+                  Band qilish
                 </button>
               </div>
             </form>
@@ -249,37 +249,37 @@ export default function ReservationModal({ isOpen, onClose }) {
             </div>
 
             <span className="text-xs font-semibold uppercase tracking-widest text-caramel">
-              BOOKING CONFIRMED
+              BAND QILISH TASDIQLANDI
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-espresso mt-1 mb-2">
-              We look forward to hosting you!
+              Sizni kutib olishdan mamnunmiz!
             </h3>
             <p className="text-sm text-espresso/70 max-w-md mx-auto mb-6">
-              A confirmation text message and calendar reminder have been sent to{' '}
+              Tasdiqlash xabarnomasi va eslatma quyidagi raqamga yuborildi:{' '}
               <span className="font-semibold text-espresso">{reservationDetails?.phone}</span>.
             </p>
 
             <div className="bg-sand/40 border border-sand rounded-2xl p-5 max-w-md mx-auto text-left text-xs sm:text-sm space-y-2 mb-6">
               <div className="flex justify-between border-b border-sand/60 pb-2">
-                <span className="text-espresso/60">Booking Code:</span>
+                <span className="text-espresso/60">Band qilish kodi:</span>
                 <span className="font-mono font-bold text-coffee">{reservationDetails?.code}</span>
               </div>
               <div className="flex justify-between border-b border-sand/60 pb-2">
-                <span className="text-espresso/60">Reserved For:</span>
+                <span className="text-espresso/60">Mijoz:</span>
                 <span className="font-semibold text-espresso">{reservationDetails?.name}</span>
               </div>
               <div className="flex justify-between border-b border-sand/60 pb-2">
-                <span className="text-espresso/60">Date & Time:</span>
+                <span className="text-espresso/60">Sana va vaqt:</span>
                 <span className="font-semibold text-espresso">
-                  {reservationDetails?.date} at {reservationDetails?.time}
+                  {reservationDetails?.date}, soat {reservationDetails?.time}
                 </span>
               </div>
               <div className="flex justify-between border-b border-sand/60 pb-2">
-                <span className="text-espresso/60">Party Size:</span>
-                <span className="font-semibold text-espresso">{reservationDetails?.guests} Guests</span>
+                <span className="text-espresso/60">Mehmonlar soni:</span>
+                <span className="font-semibold text-espresso">{reservationDetails?.guests} kishi</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-espresso/60">Location:</span>
+                <span className="text-espresso/60">Filial:</span>
                 <span className="font-semibold text-espresso">{reservationDetails?.location}</span>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function ReservationModal({ isOpen, onClose }) {
               onClick={handleReset}
               className="py-3 px-8 bg-espresso hover:bg-coffee text-cream text-sm font-semibold rounded-full transition-colors"
             >
-              Done
+              Tushunarli
             </button>
           </div>
         )}

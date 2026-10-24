@@ -54,9 +54,9 @@ export default function MenuCard({ item, onAddToCart }) {
       {/* Footer: Price and Add Button */}
       <div className="pt-3 border-t border-sand/70 flex items-center justify-between mt-auto">
         <div>
-          <span className="text-xs text-espresso/50 block font-medium">Price</span>
-          <span className="font-serif text-xl sm:text-2xl font-bold text-espresso">
-            ${item.price.toFixed(2)}
+          <span className="text-xs text-espresso/50 block font-medium">Narxi</span>
+          <span className="font-serif text-lg sm:text-xl font-bold text-espresso">
+            {item.price.toLocaleString('uz-UZ')} soʻm
           </span>
         </div>
 
@@ -64,7 +64,7 @@ export default function MenuCard({ item, onAddToCart }) {
         <button
           onClick={handleAdd}
           type="button"
-          aria-label={`Add ${item.name} to order`}
+          aria-label={`${item.name}ni buyurtmaga qoʻshish`}
           className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 shadow-warm-sm focus:outline-none focus:ring-2 focus:ring-caramel ${
             isAdded
               ? 'bg-emerald-700 text-white scale-105'

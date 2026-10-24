@@ -5,30 +5,30 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const FEATURES_DATA = [
   {
     id: 'quality',
-    title: 'Quality Coffee',
-    subtitle: 'Micro-Lot Single Origin',
+    title: 'Sifatli qahva',
+    subtitle: 'Plantatsiya mikro-partiyalari',
     icon: Coffee,
     image: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80',
-    text: 'We partner directly with sustainable smallholder farms in Colombia and Ethiopia, roasting every small batch on-site for peak flavor clarity.',
-    fullDetail: 'Every bean that enters Qahva House has a story. We cup dozens of micro-lots each harvest season to select only coffees scoring 86+ on the SCA scale. From precision temperature-controlled grinders to artisanal La Marzocco espresso extractions, our passion for quality shines in every drop.'
+    text: 'Biz Kolumbiya va Efiopiyaning barqaror fermer xoʻjaliklari bilan toʻgʻridan-toʻgʻri ishlaymiz va donalarni oʻzimizda kichik partiyalarda qovuramiz.',
+    fullDetail: 'Qahva House ostonasidan kirgan har bir donaning oʻziga xos tarixi bor. Har bir hosil mavsumida SCA shkalasi boʻyicha 86+ ball toʻplagan eng sara mikro-partiyalarni tanlab olamiz. Aniq harorat nazoratiga ega qahva maydalagichlardan tortib La Marzocco mashinalaridagi ekstraksiyagacha — sifatga boʻlgan ishtiyoqimiz har bir qultumda aks etadi.'
   },
   {
     id: 'fresh',
-    title: 'Fresh & Delicious',
-    subtitle: 'Daily Morning Oven',
+    title: 'Yangi va mazali',
+    subtitle: 'Erta tonggi novvoyxona',
     icon: Heart,
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
-    text: 'Our in-house bakers begin at 4:00 AM each morning, laminating golden croissants, sourdough breads, and seasonal tartlets from scratch.',
-    fullDetail: 'We believe exceptional coffee deserves equally exceptional food. We work with local organic dairies, stone-ground flours, and ripe seasonal produce to craft brunch staples, sourdough toasts, and delicate French pastries that melt in your mouth.'
+    text: 'Mohir novvoylarimiz har tong soat 04:00 da ish boshlab, tabiiy sariyogʻli tilla kruassanlar va xushboʻy nordon nonlarni pishiradilar.',
+    fullDetail: 'Mukammal qahva faqat eng yaxshi pishiriqlar bilan toʻliq uygʻunlik hosil qiladi deb ishonamiz. Mahalliy tabiiy sut mahsulotlari, tosh tegirmonda tortilgan toza un va sarxil mevalardan foydalanib, ogʻizda eriydigan nonushtalar va nozik fransuz shirinliklarini taqdim etamiz.'
   },
   {
     id: 'cozy',
-    title: 'Cozy Atmosphere',
-    subtitle: 'Warm Community Sanctuary',
+    title: 'Shinam muhit',
+    subtitle: 'Iliq va samimiy goʻsha',
     icon: Home,
     image: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80',
-    text: 'Natural timber accents, warm amber lighting, handcrafted ceramic mugs, and soothing acoustic tunes make Qahva House your second home.',
-    fullDetail: 'Designed as an antidote to fast-paced life, our cafes provide comfortable reading nooks, communal gathering tables, and reliable high-speed fiber Wi-Fi. Whether you are meeting an old friend or journaling alone with a warm cup, you belong here.'
+    text: 'Tabiiy yogʻoch bezaklar, mayin iliq yorugʻlik, qoʻlda yasalgan sopol idishlar va yoqimli sokin musiqa — bu yer sizning ikkinchi uyingizdir.',
+    fullDetail: 'Shiddatli hayot ritmidan xoli maskan sifatida loyihalangan qahvaxonamizda qulay mutolaa burchaklari, samimiy davralar uchun keng stollar va yuqori tezlikdagi Wi-Fi mavjud. Doʻstlar bilan diydorlashish yoki bir finjon issiq kofe bilan yolgʻiz qolib ijod qilish uchun eng yaxshi joy.'
   }
 ];
 
@@ -49,13 +49,13 @@ export default function WhyChooseUs() {
         >
           <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-3">
             <Sparkles className="w-3.5 h-3.5 text-caramel" />
-            <span>THE QAHVA EXPERIENCE</span>
+            <span>QAHVA TAJRIBASI</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso tracking-tight mb-4">
-            Why Choose Us
+            Nega aynan biz?
           </h2>
           <p className="text-sm sm:text-base text-espresso/70 leading-relaxed font-light">
-            Every cup, every pastry, and every corner of our cafe is designed with intentional warmth and uncompromised craft.
+            Har bir finjon qahva, har bir pishiriq va maskanimizning har bir burchagi yuksak mehr va haqiqiy hunarmandchilik bilan yaratilgan.
           </p>
         </div>
 
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
                     type="button"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-coffee hover:text-caramel transition-colors group/btn pt-2 border-t border-sand/70 self-start w-full justify-between"
                   >
-                    <span>Learn More</span>
+                    <span>Batafsil</span>
                     <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
@@ -120,7 +120,7 @@ export default function WhyChooseUs() {
             <button
               onClick={() => setSelectedFeature(null)}
               className="absolute top-4 right-4 p-2 rounded-full text-espresso/70 hover:bg-sand/60 hover:text-espresso transition-colors"
-              aria-label="Close modal"
+              aria-label="Modalni yopish"
             >
               <X className="w-5 h-5" />
             </button>
@@ -144,7 +144,7 @@ export default function WhyChooseUs() {
               onClick={() => setSelectedFeature(null)}
               className="w-full py-3 bg-espresso hover:bg-coffee text-cream font-medium rounded-full text-sm transition-colors"
             >
-              Close
+              Yopish
             </button>
           </div>
         </div>

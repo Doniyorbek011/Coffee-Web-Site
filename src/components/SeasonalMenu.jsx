@@ -22,24 +22,24 @@ export default function SeasonalMenu({ onAddToCart, onOpenFullMenu }) {
           <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-3">
               <Sparkles className="w-3.5 h-3.5 text-caramel" />
-              <span>HANDCRAFTED DELIGHTS</span>
+              <span>MAXSUS RETSEPTLAR</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso tracking-tight">
-              Seasonal Favourites
+              Mavsumiy sevimlilar
             </h2>
           </div>
 
           {/* Right Description & Button */}
           <div className="max-w-md flex flex-col sm:flex-row sm:items-center md:flex-col md:items-start lg:flex-row lg:items-center gap-4">
             <p className="text-sm sm:text-base text-espresso/75 leading-relaxed font-light">
-              Carefully curated signature recipes celebrating fresh harvest micro-lots and artisan morning bakery.
+              Yangi hosilning sara mikro-partiyalari va erta tongda pishirilgan xushboʻy pishiriqlardan tayyorlangan mualliflik taomnomasi.
             </p>
             <button
               onClick={onOpenFullMenu}
               type="button"
               className="inline-flex items-center gap-2 bg-espresso text-cream hover:bg-coffee px-5 py-3 rounded-full text-sm font-medium tracking-wide whitespace-nowrap shadow-warm-sm hover:shadow-warm-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              <span>View Full Menu</span>
+              <span>Toʻliq menyu</span>
               <ArrowUpRight className="w-4 h-4 text-caramel" />
             </button>
           </div>

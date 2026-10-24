@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Phone, Navigation, Sparkles, ExternalLink, X } from 'lucide-react';
+import { MapPin, Clock, Navigation, Sparkles, ExternalLink, X } from 'lucide-react';
 import { BRAND_INFO } from '../data/brand';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
@@ -11,18 +11,18 @@ export default function VisitUs({ onOpenReserve }) {
   const galleryPhotos = [
     {
       url: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80',
-      alt: 'Sunlit wooden seating area with plants at Qahva House',
-      caption: 'The Reading Nook • Flagship'
+      alt: 'Qahva House qahvaxonasining yorugʻ va shinam mutolaa burchagi',
+      caption: 'Mutolaa burchagi • Bosh filial'
     },
     {
       url: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80',
-      alt: 'Artisan ceramic coffee cups on natural reclaimed oak table',
-      caption: 'Morning Brews • Fresh Extraction'
+      alt: 'Eman yogʻochli stolda yangi damlangan qahva finjonlari',
+      caption: 'Tonggi qahva • Yangi ekstraksiya'
     },
     {
       url: 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=800&q=80',
-      alt: 'Warm entrance and outdoor greenery seating terrace',
-      caption: 'Garden Terrace • Downtown'
+      alt: 'Yashillik bilan oʻralgan shinam ochiq ayvon',
+      caption: 'Yozgi ayvon • Markaziy filial'
     }
   ];
 
@@ -35,29 +35,29 @@ export default function VisitUs({ onOpenReserve }) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          {/* Left Column: Text + Opening Hours + Find Our Location Button (5 cols) */}
+          {/* Left Column: Text + Opening Hours + Find Our Location Button */}
           <div className="lg:col-span-5">
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-3">
               <Sparkles className="w-3.5 h-3.5 text-caramel" />
-              <span>WARM WELCOME AWAITS</span>
+              <span>SIZNI KUTMOQDAMIZ</span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso tracking-tight leading-tight mb-5">
-              Visit Us <span className="text-caramel italic">Today</span>
+              Bugun mehmon <span className="text-caramel italic">boʻling</span>
             </h2>
 
             <p className="text-sm sm:text-base text-espresso/75 leading-relaxed font-light mb-8">
-              Step in out of the cold, breathe in the fresh roasted aroma, and let our welcoming baristas craft your favorite morning or afternoon ritual.
+              Shinam maskanimizga marhamat qiling, yangi qovurilgan qahva iforidan bahramand boʻling va samimiy baristalarimiz tayyorlagan sevimli ichimligingizdan lazzatlaning.
             </p>
 
             {/* Opening Hours Box */}
             <div className="bg-sand/40 border border-sand rounded-3xl p-6 mb-8 shadow-warm-sm">
               <div className="flex items-center gap-2.5 text-espresso font-serif text-lg font-bold mb-4">
                 <Clock className="w-5 h-5 text-caramel" />
-                <span>Opening Hours</span>
+                <span>Ish vaqti</span>
                 <span className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">
                   <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-                  Open Today
+                  Bugun ochiqmiz
                 </span>
               </div>
 
@@ -75,7 +75,7 @@ export default function VisitUs({ onOpenReserve }) {
 
               <div className="mt-4 pt-3 border-t border-sand/60 flex items-center gap-2 text-xs text-espresso/70">
                 <MapPin className="w-4 h-4 text-caramel flex-shrink-0" />
-                <span>Main: {BRAND_INFO.address}, {BRAND_INFO.city}</span>
+                <span>Bosh bino: {BRAND_INFO.address}, {BRAND_INFO.city}</span>
               </div>
             </div>
 
@@ -87,7 +87,7 @@ export default function VisitUs({ onOpenReserve }) {
                 className="inline-flex items-center justify-center gap-2 bg-espresso text-cream hover:bg-coffee px-6 py-3.5 rounded-full text-sm font-medium tracking-wide shadow-warm-sm hover:shadow-warm-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <Navigation className="w-4 h-4 text-caramel" />
-                <span>Find Our Location</span>
+                <span>Manzilimizni topish</span>
               </button>
 
               <button
@@ -95,15 +95,15 @@ export default function VisitUs({ onOpenReserve }) {
                 type="button"
                 className="inline-flex items-center justify-center gap-2 bg-sand/70 hover:bg-sand border border-sand-dark text-espresso px-6 py-3.5 rounded-full text-sm font-medium tracking-wide transition-colors"
               >
-                <span>Reserve a Table</span>
+                <span>Stol band qilish</span>
               </button>
             </div>
           </div>
 
-          {/* Right Column: 3-Photo Gallery (7 cols) */}
+          {/* Right Column: 3-Photo Gallery */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-              {/* Photo 1: Large Span */}
+              {/* Photo 1 */}
               <div
                 onClick={() => setSelectedPhoto(galleryPhotos[0])}
                 className="sm:col-span-2 group relative aspect-[16/9] rounded-3xl overflow-hidden cursor-pointer shadow-warm-md border border-sand/80"
@@ -120,7 +120,7 @@ export default function VisitUs({ onOpenReserve }) {
                     {galleryPhotos[0].caption}
                   </span>
                   <span className="text-xs bg-cream/20 backdrop-blur-md px-3 py-1 rounded-full border border-cream/30">
-                    View
+                    Koʻrish
                   </span>
                 </div>
               </div>
@@ -174,17 +174,17 @@ export default function VisitUs({ onOpenReserve }) {
             <button
               onClick={() => setShowLocationModal(false)}
               className="absolute top-4 right-4 p-2 rounded-full text-espresso/70 hover:bg-sand/60 hover:text-espresso transition-colors"
-              aria-label="Close modal"
+              aria-label="Modalni yopish"
             >
               <X className="w-5 h-5" />
             </button>
             
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-1">
               <MapPin className="w-3.5 h-3.5" />
-              <span>3 SANCTUARIES</span>
+              <span>3 TA SHINAM FILIAL</span>
             </div>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-espresso mb-6">
-              Our Locations
+              Bizning manzillar
             </h3>
 
             <div className="space-y-4">
@@ -213,7 +213,7 @@ export default function VisitUs({ onOpenReserve }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-4 py-2 bg-espresso text-cream hover:bg-coffee rounded-full text-xs font-medium self-start sm:self-center transition-colors whitespace-nowrap"
                   >
-                    <span>Get Directions</span>
+                    <span>Xaritada koʻrish</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -224,7 +224,7 @@ export default function VisitUs({ onOpenReserve }) {
               onClick={() => setShowLocationModal(false)}
               className="w-full mt-6 py-3 bg-sand hover:bg-sand-dark text-espresso font-semibold rounded-full text-sm transition-colors"
             >
-              Close
+              Yopish
             </button>
           </div>
         </div>
@@ -240,7 +240,7 @@ export default function VisitUs({ onOpenReserve }) {
             <button
               onClick={() => setSelectedPhoto(null)}
               className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-espresso/80 text-cream hover:bg-espresso transition-colors"
-              aria-label="Close photo preview"
+              aria-label="Rasmni yopish"
             >
               <X className="w-6 h-6" />
             </button>

@@ -1,45 +1,45 @@
 export const CAFE_NAME = "Qahva House";
-export const CAFE_TAGLINE = "Good coffee, great moments.";
+export const CAFE_TAGLINE = "Ajoyib qahva, unutilmas lahzalar.";
 
 export const BRAND_INFO = {
   name: CAFE_NAME,
   tagline: CAFE_TAGLINE,
-  shortDescription: "Artisanal roastery and cozy neighborhood gathering space celebrating specialty single-origin coffees, handcrafted brews, and fresh morning bakery.",
-  phone: "+1 (555) 724-8269",
-  email: "hello@qahvahouse.com",
-  instagram: "@qahvahouse",
-  address: "428 Artisan Way, Old Town Quarter",
-  city: "Seattle, WA 98101",
+  shortDescription: "Sara qahva donalarini oʻzimizda qovuruvchi, nozik did bilan damlangan ichimliklar va tonggi issiq pishiriqlar taqdim etuvchi shinam maskan.",
+  phone: "+998 (71) 200-82-69",
+  email: "salom@qahvahouse.uz",
+  instagram: "@qahvahouse.uz",
+  address: "Navoiy koʻchasi, 42-uy, Eski shahar dahasi",
+  city: "Toshkent shahri",
   hours: [
-    { days: "Monday – Friday", time: "06:30 AM – 08:00 PM" },
-    { days: "Saturday – Sunday", time: "07:30 AM – 09:00 PM" }
+    { days: "Dushanba – Juma", time: "07:00 – 21:00" },
+    { days: "Shanba – Yakshanba", time: "08:00 – 22:00" }
   ],
   stats: [
-    { label: "Happy Customers", value: 10, suffix: "K+", prefix: "" },
-    { label: "Average Rating", value: 4.8, suffix: "★", prefix: "", decimals: 1 },
-    { label: "Locations", value: 3, suffix: "", prefix: "" },
+    { label: "Mamnun mijozlar", value: 10, suffix: " ming+", prefix: "" },
+    { label: "Oʻrtacha baho", value: 4.8, suffix: "★", prefix: "", decimals: 1 },
+    { label: "Shinam filiallar", value: 3, suffix: "", prefix: "" },
   ],
   locations: [
     {
-      name: "Old Town Flagship",
-      address: "428 Artisan Way, Old Town Quarter",
-      hours: "Mon-Sun: 6:30 AM - 8:30 PM",
-      features: "Roastery • Outdoor Patio • Wi-Fi",
-      phone: "+1 (555) 724-8269"
+      name: "Eski shahar (Bosh filial)",
+      address: "Navoiy koʻchasi, 42-uy",
+      hours: "Dushanba–Yakshanba: 07:00 – 21:00",
+      features: "Qovurish sexi • Yozgi ayvon • Wi-Fi",
+      phone: "+998 (71) 200-82-69"
     },
     {
-      name: "Downtown Botanica",
-      address: "812 Pinecrest Blvd, Suite 104",
-      hours: "Mon-Sat: 7:00 AM - 7:00 PM",
-      features: "Espresso Bar • Meeting Nooks • Rapid Pickup",
-      phone: "+1 (555) 724-8270"
+      name: "Markaziy Botanika",
+      address: "Amir Temur shoh koʻchasi, 18-uy",
+      hours: "Dushanba–Shanba: 07:30 – 21:00",
+      features: "Espresso bar • Ishlash burchaklari • Tezkor buyurtma",
+      phone: "+998 (71) 200-82-70"
     },
     {
-      name: "Waterfront Atrium",
-      address: "15 Oceanview Promenade",
-      hours: "Tue-Sun: 7:30 AM - 9:00 PM",
-      features: "Harbor Views • Specialty Bakery • Tasting Room",
-      phone: "+1 (555) 724-8271"
+      name: "Sohil boʻyi filiali",
+      address: "Anhor boʻyi koʻchasi, 5-uy",
+      hours: "Seshanba–Yakshanba: 08:00 – 22:00",
+      features: "Daryo manzarasi • Maxsus novvoyxona • Degustatsiya zali",
+      phone: "+998 (71) 200-82-71"
     }
   ]
 };

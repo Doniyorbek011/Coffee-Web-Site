@@ -14,7 +14,7 @@ export default function OurStory({ onOpenStoryModal }) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
-          {/* Dark Espresso Block on the Left (5 or 6 cols) */}
+          {/* Dark Espresso Block on the Left (5 cols) */}
           <div className="lg:col-span-5 bg-espresso text-cream p-8 sm:p-12 lg:p-16 flex flex-col justify-between relative z-10">
             {/* Subtle decorative background glow */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-coffee/20 rounded-full blur-3xl pointer-events-none" />
@@ -22,20 +22,20 @@ export default function OurStory({ onOpenStoryModal }) {
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-caramel uppercase mb-4">
                 <Sparkles className="w-3.5 h-3.5 text-caramel" />
-                <span>ROOTED IN PASSION</span>
+                <span>MEHR BILAN SUGʻORILGAN</span>
               </div>
 
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream tracking-tight leading-tight mb-6">
-                A space for{' '}
-                <span className="text-caramel italic">good people.</span>
+                Yaxshi insonlar uchun{' '}
+                <span className="text-caramel italic">maskan.</span>
               </h2>
 
               <p className="text-sand/80 text-sm sm:text-base leading-relaxed mb-6 font-light">
-                The word <em className="text-caramel font-normal">“Qahva”</em> traces back to the historic origins of coffee culture—where the beverage was celebrated not merely as a morning stimulant, but as a ritual of communion, intellectual conversation, and generous hospitality.
+                Qadimiy <em className="text-caramel font-normal">“Qahva”</em> anʼanalari mehmondoʻstlik va samimiyatga asoslangan — bu ichimlik shunchaki tonggi odat emas, balki doʻstona diydor va iliq suhbatlar vositasidir.
               </p>
 
               <p className="text-sand/70 text-sm sm:text-base leading-relaxed mb-8 font-light">
-                Founded in 2019, Qahva House started as a modest roasting garage with a single cast-iron roaster and an unwavering dedication to farmers. Today, our cafes serve as neighborhood sanctuaries where every guest is welcomed like family.
+                2019-yilda kichik qovurish ustaxonasi sifatida ish boshlagan Qahva House har bir donaga va mehnatkash dehqonlarga hurmat bilan yondashadi. Bugun qahvaxonalarimiz har bir mehmon oʻz uyidek his qiladigan shinam makondir.
               </p>
             </div>
 
@@ -45,13 +45,13 @@ export default function OurStory({ onOpenStoryModal }) {
                 type="button"
                 className="inline-flex items-center gap-2.5 bg-caramel hover:bg-caramel-light text-cream px-6 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-200 transform hover:-translate-y-0.5 shadow-md active:translate-y-0"
               >
-                <span>Our Story</span>
+                <span>Hikoyamiz</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <div className="flex items-center gap-2 text-sand/60 text-xs">
                 <Award className="w-4 h-4 text-caramel" />
-                <span>Award-winning Roastery</span>
+                <span>Mukofotga sazovor qovuruvchi</span>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function OurStory({ onOpenStoryModal }) {
           <div className="lg:col-span-7 relative min-h-[380px] lg:min-h-full bg-espresso-dark">
             <img
               src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80"
-              alt="Artisan barista carefully brewing specialty pour-over coffee at Qahva House"
+              alt="Qahva House ustasi mehr bilan qahva damlamoqda"
               loading="lazy"
               className="w-full h-full object-cover object-center"
             />
@@ -72,11 +72,11 @@ export default function OurStory({ onOpenStoryModal }) {
               <div className="flex items-center gap-2 mb-1.5">
                 <Coffee className="w-4 h-4 text-caramel" />
                 <span className="text-[11px] uppercase font-bold tracking-wider text-caramel">
-                  Master Roaster Note
+                  Usta qovuruvchi oʻgiti
                 </span>
               </div>
               <p className="text-xs text-espresso/80 italic font-serif leading-snug">
-                “True coffee isn’t rushed. It is coaxed, savored, and shared with open hearts.”
+                “Haqiqiy qahva shoshqaloqlikni yoqtirmaydi. Undan mehr bilan lazzatlaniladi va ochiq koʻngil bilan ulashiladi.”
               </p>
             </div>
           </div>

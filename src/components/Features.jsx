@@ -5,23 +5,23 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const FEATURES_LIST = [
   {
     icon: Leaf,
-    title: 'Sustainably Sourced',
-    desc: 'Direct-trade partnerships ensuring 100% fair pay to origin farmers.',
+    title: "Masʼuliyatli yetkazib berilgan",
+    desc: 'Fermerlar bilan toʻgʻridan-toʻgʻri adolatli savdo hamkorligi.',
   },
   {
     icon: Flame,
-    title: 'Locally Roasted',
-    desc: 'Small-batch roasted in Seattle weekly for maximum aromatic profile.',
+    title: 'Mahalliy qovurilgan',
+    desc: 'Maksimal xushboʻylikni taʼminlash uchun har hafta oʻzimizda yangi qovuriladi.',
   },
   {
     icon: Sparkles,
-    title: 'Cozy Spaces',
-    desc: 'Ergonomic seating, warm natural textures, and relaxing ambient music.',
+    title: 'Shinam maskan',
+    desc: 'Qulay oʻrindiqlar, iliq tabiiy bezaklar va yoqimli sokin musiqa.',
   },
   {
     icon: CupSoda,
-    title: 'Specialty Drinks',
-    desc: 'Signature house syrups crafted from real botanicals and spices.',
+    title: 'Maxsus ichimliklar',
+    desc: 'Tabiiy ziravorlar va botanika giyohlari asosidagi mualliflik retseptlari.',
   },
 ];
 

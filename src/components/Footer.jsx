@@ -38,14 +38,14 @@ export default function Footer() {
     if (!email || !emailRegex.test(email)) {
       setStatus({
         state: 'error',
-        message: 'Please provide a valid email address.'
+        message: 'Iltimos, toʻgʻri elektron pochta manzilini kiriting.'
       });
       return;
     }
 
     setStatus({
       state: 'success',
-      message: 'Welcome to the inner circle! 10% off code sent to your inbox.'
+      message: 'Klubimizga xush kelibsiz! 10% chegirma kodi pochtangizga yuborildi.'
     });
     setEmail('');
   };
@@ -58,7 +58,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-14 border-b border-sand/15">
           
-          {/* Col 1: Brand Info (5 cols) */}
+          {/* Col 1: Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-2.5">
               <div className="w-10 h-10 rounded-full bg-caramel text-cream flex items-center justify-center shadow-md">
@@ -102,37 +102,37 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Quick Links (3 cols) */}
+          {/* Col 2: Quick Links */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-serif text-base font-bold text-cream tracking-wide">
-              Explore
+              Boʻlimlar
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-sand/70">
               <li>
-                <a href="#home" className="hover:text-caramel transition-colors">Home & Roastery</a>
+                <a href="#home" className="hover:text-caramel transition-colors">Bosh sahifa</a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-caramel transition-colors">Seasonal Menu</a>
+                <a href="#menu" className="hover:text-caramel transition-colors">Mavsumiy menyu</a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-caramel transition-colors">Why Choose Us</a>
+                <a href="#why-us" className="hover:text-caramel transition-colors">Nega aynan biz?</a>
               </li>
               <li>
-                <a href="#our-story" className="hover:text-caramel transition-colors">Our Story & Heritage</a>
+                <a href="#our-story" className="hover:text-caramel transition-colors">Hikoyamiz va qadriyatlarimiz</a>
               </li>
               <li>
-                <a href="#locations" className="hover:text-caramel transition-colors">Hours & Locations</a>
+                <a href="#locations" className="hover:text-caramel transition-colors">Ish vaqti va manzillar</a>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Newsletter (4 cols) */}
+          {/* Col 3: Newsletter */}
           <div className="lg:col-span-4 space-y-3">
             <h4 className="font-serif text-base font-bold text-cream tracking-wide">
-              The Qahva Gazette
+              Qahva xabarnomasi
             </h4>
             <p className="text-sand/70 text-xs sm:text-sm leading-relaxed font-light">
-              Receive secret tasting notes, seasonal release alerts, and fresh roaster updates right in your inbox.
+              Yangi hosil partiyalari, maxsus degustatsiyalar va yangi taomnomalar haqida birinchilardan boʻlib xabardor boʻling.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-2 pt-1">
@@ -144,13 +144,13 @@ export default function Footer() {
                     setEmail(e.target.value);
                     if (status.state !== 'idle') setStatus({ state: 'idle', message: '' });
                   }}
-                  placeholder="Enter your email address..."
-                  aria-label="Email for newsletter"
+                  placeholder="Elektron pochtangiz..."
+                  aria-label="Xabarnoma uchun elektron pochta"
                   className="w-full bg-sand/10 border border-sand/20 rounded-full px-4 py-3 pr-12 text-xs sm:text-sm text-cream placeholder-sand/40 focus:outline-none focus:border-caramel focus:ring-1 focus:ring-caramel transition-all"
                 />
                 <button
                   type="submit"
-                  aria-label="Subscribe to newsletter"
+                  aria-label="Obuna boʻlish"
                   className="absolute right-1.5 w-8 h-8 rounded-full bg-caramel hover:bg-caramel-light text-cream flex items-center justify-center transition-transform hover:scale-105 active:scale-95 shadow-sm"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -174,43 +174,43 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Legal */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-sand/60">
-          <p>© {new Date().getFullYear()} {CAFE_NAME}. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {CAFE_NAME}. Barcha huquqlar himoyalangan.</p>
 
           <div className="flex items-center gap-6">
             <button
               onClick={() => setLegalModal('privacy')}
               className="hover:text-caramel transition-colors"
             >
-              Privacy Policy
+              Maxfiylik siyosati
             </button>
             <span>•</span>
             <button
               onClick={() => setLegalModal('terms')}
               className="hover:text-caramel transition-colors"
             >
-              Terms of Service
+              Foydalanish shartlari
             </button>
           </div>
         </div>
       </div>
 
-      {/* Simple Legal Modal */}
+      {/* Legal Modal */}
       {legalModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-espresso/80 backdrop-blur-sm animate-fade-in">
           <div className="bg-cream text-espresso rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-sand">
             <h3 className="font-serif text-2xl font-bold mb-3">
-              {legalModal === 'privacy' ? 'Privacy Policy' : 'Terms of Service'}
+              {legalModal === 'privacy' ? 'Maxfiylik siyosati' : 'Foydalanish shartlari'}
             </h3>
             <p className="text-sm text-espresso/75 leading-relaxed mb-6 font-light">
               {legalModal === 'privacy'
-                ? 'At Qahva House, your privacy is deeply respected. We only collect the information necessary to serve your reservations, orders, and newsletter updates. We never sell your personal information.'
-                : 'Welcome to Qahva House. By browsing our website and making table reservations, you agree to treat our staff and community with respect. Reservation hold times are guaranteed for up to 15 minutes.'}
+                ? 'Qahva House jamoasi sizning shaxsiy maʼlumotlaringizni yuksak qadrlaydi. Biz faqat stol band qilish va xabarnomalarni yetkazish uchun zarur boʻlgan maʼlumotlarni toʻplaymiz va ularni uchinchi shaxslarga aslo bermaymiz.'
+                : 'Qahva House qahvaxonasiga xush kelibsiz. Saytimizdan foydalanish va stol band qilish orqali siz jamoamiz va boshqa mehmonlarga oʻzaro hurmat bilan munosabatda boʻlishga rozilik bildirasiz. Band qilingan stollar 15 daqiqa davomida saqlanadi.'}
             </p>
             <button
               onClick={() => setLegalModal(null)}
               className="w-full py-2.5 bg-espresso hover:bg-coffee text-cream text-sm font-semibold rounded-full transition-colors"
             >
-              Understood
+              Tushunarli
             </button>
           </div>
         </div>

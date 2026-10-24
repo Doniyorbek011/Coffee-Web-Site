@@ -15,14 +15,14 @@ export default function Toast({ message, onOpenCart, isVisible }) {
             {message}
           </p>
           <span className="text-[11px] text-sand/70 block">
-            Added to your order
+            Buyurtmaga qoʻshildi
           </span>
         </div>
         <button
           onClick={onOpenCart}
           className="text-xs font-semibold text-caramel hover:text-caramel-light flex items-center gap-1 transition-colors pl-2 border-l border-sand/20 whitespace-nowrap"
         >
-          <span>View</span>
+          <span>Koʻrish</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </div>

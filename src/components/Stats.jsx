@@ -38,8 +38,8 @@ export default function Stats() {
         <StatItem
           icon={Users}
           targetValue={10}
-          suffix="K+"
-          label="Happy Customers"
+          suffix=" ming+"
+          label="Mamnun mijozlar"
           isStarted={isVisible}
         />
         <StatItem
@@ -47,14 +47,14 @@ export default function Stats() {
           targetValue={4.8}
           decimals={1}
           suffix="★"
-          label="Average Rating"
+          label="Oʻrtacha baho"
           isStarted={isVisible}
         />
         <StatItem
           icon={MapPin}
           targetValue={3}
-          suffix=""
-          label="Artisan Locations"
+          suffix=" ta"
+          label="Shinam filiallar"
           isStarted={isVisible}
         />
       </div>
